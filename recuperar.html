@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar Contraseña</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+ background: linear-gradient(to top, #00ADB5, #393E46) no-repeat center center fixed;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="email"] {
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Recuperar Contraseña</h1>
+    <hr width=100%  align="right"  size=10   noshade="noshade">
+    <form id="form">
+      <label for="from_name">Correo Electrónico*:</label>
+          <input type="email" name="from_name" id="from_name" required class="form-control">
+
+      <input type="submit" id="button" value="Recuperar Contraseña">
+      <small>El administrador del sistema se pondra en contacacto con usted para recuperar su contrase&ntilde;a. Tambien, puede ponerse en contacto con el administrador del sistema a traves de la siguiente direccion de correo electronico: sysadmin.homeintranet@proton.me</small>
+    </form>
+    <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('zT_lDEzT03pPbXGYH')
+</script>
+<script src="recuperar.js"></script>
+ 
+                            <h4> <font color="black">- Volver <font color="blue"><a href="https://homeintranet.ddns.net/"><font color="blue">a la pagina principal</a></h4>
+                            <h4> <font color="black">- Volver <font color="blue"><a href="https://homeintranet.ddns.net/nextcloud"><font color="blue"> al login de Nextcloud</a></h4>
+</html>
