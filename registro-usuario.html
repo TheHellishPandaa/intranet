@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro Usuario</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+ background: linear-gradient(to top, #00ADB5, #393E46) no-repeat center center fixed;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #00ADB5;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Registro Usuario</h1>
+    <hr width=100%  align="right"  size=10   noshade="noshade">
+<form id="form" onsubmit="return validarContraseña();">
+  <div class="field">
+    <label for="from_name">Correo electronico*:</label>
+    <input type="email" name="from_name" id="from_name" placeholder="ejemplo@gmail.com"required>
+  </div>
+  <div class="field">
+    <label for="to_name">Nombre y apellidos*:</label>
+    <input type="text" name="to_name" id="to_name"  placeholder="Maria Galvez" required>
+  </div>
+  <div class="field">
+    <label for="message">Elija una contrase&ntilde;a*:</label>
+    <input type="password" name="message" id="message" pattern="^(?=.*[A-Z])(?=.*\d).{10,}$" title="La contraseña debe tener al menos 10 caracteres, una letra mayúscula y un número." placeholder="Contraseña"required>
+  </div>
+  <div class="field">
+    <label for="reply_to">Repita la contrase&ntilde;a*:</label>
+    <input type="password" name="reply_to" id="reply_to" pattern="^(?=.*[A-Z])(?=.*\d).{10,}$" title="La contraseña debe tener al menos 10 caracteres, una letra mayúscula y un número." placeholder="Repita la Contraseña" required>
+  </div>
+		 <hr width=100%  align="right"  size=10   noshade="noshade">
+	<strong>El administrador del sistema le proporcionara un usuario y una contraseña por correo</strong>
+	<h1></h1>
+  <input type="submit" id="button" value="Crear Cuenta">
+</form>
+
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('zT_lDEzT03pPbXGYH')
+</script>
+<script src="registro-usuario.js"></script>
+ <script>
+        function validarContraseña() {
+            var contraseña = document.getElementById("contraseña").value;
+
+            // Verificar la longitud mínima
+            if (contraseña.length < 10) {
+                alert("La contraseña debe tener al menos 10 caracteres.");
+                return false;
+            }
+
+            // Verificar si contiene al menos un número
+            if (!/\d/.test(contraseña)) {
+                alert("La contraseña debe contener al menos un número.");
+                return false;
+            }
+
+            // Verificar si contiene al menos una letra mayúscula
+            if (!/[A-Z]/.test(contraseña)) {
+                alert("La contraseña debe contener al menos una letra mayúscula.");
+                return false;
+            }
+
+            // Si cumple con todos los requisitos
+            return true;
+        }
+    </script>
+		<h4> <font color="black">- Volver <font color="blue"><a href="https://homeintranet.sytes.net/"><font color="blue">a la pagina principal</a></h4>
+             	  
+</html>
+
